@@ -1,0 +1,32 @@
+<template>
+    <div class="bodyclass" style="height: {{ctHeight}}">
+        <text>{{body}}</text>
+    </div>
+</template>
+
+<script>
+    var stream = require('@weex-module/stream');
+    module.exports = {
+        data: {
+            body:"this is body contenet",
+            ctHeight:"500px"
+        },
+        ready: function () {
+            var self = this;
+            stream.fetch({
+                method: 'GET',
+                url: "http://192.168.169.124:3000/testhttpget.do",
+                type:'json'
+            }, function(response) {
+                self.body =  response.data.info;
+            },function(response){
+            });
+        }
+    }
+</script>
+
+<style>
+    .bodyclass{
+        margin-top: 20px;
+    }
+</style>

@@ -1,0 +1,27 @@
+<template>
+    <div class="headclass">
+        <text>{{headinfo}}</text>
+    </div>
+</template>
+
+<script>
+    module.exports = {
+        data:{
+            headinfo:"welcome to this"
+        },
+        ready:function(){
+            var storage = require('@weex-module/storage');
+            var self = this;
+            storage.getItem("username",function(e){
+                self.headinfo = e.data;
+            });
+        }
+    }
+</script>
+
+<style>
+
+    .headclass{
+        margin-top: 200px;
+    }
+</style>

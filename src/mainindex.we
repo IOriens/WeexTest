@@ -1,0 +1,26 @@
+<template>
+    <div class="bg">
+        <headdiv></headdiv>
+        <bodydiv></bodydiv>
+        <footdiv></footdiv>
+    </div>
+</template>
+
+<script>
+    require('./components/bodydiv.we')
+    require('./components/footdiv.we')
+    require('./components/headdiv.we')
+    module.exports = {
+        data:{
+
+        }
+    }
+</script>
+
+<style>
+
+    .bg {
+        background-color: #F2F2F2;
+    }
+
+</style>

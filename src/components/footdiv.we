@@ -1,0 +1,19 @@
+<template>
+    <div class="divclass">
+        <text>{{footinfo}}</text>
+    </div>
+</template>
+
+<script>
+    module.exports = {
+        data:{
+            footinfo:"copyright@tomsnail"
+        }
+    }
+</script>
+
+<style>
+    .divclass{
+        margin-top: 200px;
+    }
+</style>
